@@ -1,0 +1,96 @@
+
+1). Write a python program to find the factorial of a number
+
+user_input = int(input('Enter the number'))
+num = 1                
+for n in range(num, user_input):
+    num *= n
+
+print(f'factorial of {user_input} is {num}')
+
+#####################################################
+
+2). Write a python program to display the multiplication table
+
+user_input = int(input('Enter the number : '))
+
+for i in range(1, 11):
+    mul = user_input*i
+    print(str(user_input) + 'x' + str(i) + '=' + str(mul)) 
+    
+#####################################################
+   
+3). Write a python program to print the fibonacci sequence
+
+user_input = int(input('Enter the no. of fibonacci numbers : '))
+count = 0
+n1, n2 = 0, 1
+
+if user_input < 0:
+    print('Enter a positive number')
+elif user_input == 1:
+    print(f'Fibonacci sequence upto 1 : 1')
+
+while count < user_input:
+    print(n1)
+    nth = n1 + n2
+    n1 = n2
+    n2 = nth
+    count += 1
+    
+######################################################
+
+4). Write a python program to check amstrong number
+
+user_input = input('Enter the number : ')
+user = list(str(user_input))
+ints = []
+for a in user:
+    ints.append(int(a))
+    sum1 = []
+    for b in ints:
+        sum1.append(b**3)
+total = []
+ab = 0
+for c in sum1:
+    ab += c
+total.append(ab)
+
+if int(user_input) == total[0]:
+    print('Amstrong Number')
+else:
+    print('Not an amstrong number')
+    
+######################################################
+
+5). Write a python program to find amstrong number in an interval
+
+lower = 1
+upper = 10000
+
+for num in range(lower, upper + 1):
+
+   order = len(str(num))
+   sum = 0
+
+   temp = num
+   while temp > 0:
+       digit = temp % 10
+       sum += digit ** order
+       temp //= 10
+
+   if num == sum:
+       print(num)
+
+######################################################
+
+6). Write a python program to find the sum of natural numbers
+
+user_input = int(input('Enter the no. of natural number\'s sum you want :'))
+n = 0
+for i in range(0, user_input+1):
+    n += i   
+print(n)
+
+
+    
