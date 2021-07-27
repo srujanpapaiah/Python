@@ -1,0 +1,80 @@
+##################################
+
+1) . Write a python program to check if a Positive, Negative or Zero?
+
+user_input = int(input('Enter the input'))
+
+if user_input > 0:
+    print('Positive Number')
+elif user_input == 0:
+    print('Not Positive or negative')
+else:
+    print('Negative number')
+   
+###################################
+
+2). Write a python program to check if a number is odd or even?
+
+user_input = int(input('Enter the input'))
+
+if user_input % 2 == 0 and user_input != 0:
+    print('Even Number')
+elif user_input == 0:
+    print('Not Even or Odd. It\'s a zero')
+else:
+    print('Odd Number')
+    
+###################################   
+
+3). Write a python program to check leap year.
+
+user_input = int(input('Enter the input'))
+
+if user_input % 4 == 0:
+    if user_input % 100 == 0:
+        if user_input % 400 == 0:
+            print('Leap year')
+        else:
+            print('Not a leap year')
+    else:
+        print('Leap year')
+else:
+    print('Not a leap year')
+
+    
+###################################
+
+4). Write a python program to check prime number.
+
+user_input = int(input('Enter the input'))
+
+flag = False
+
+if user_input > 1:
+    for i in range(2, user_input):
+        if user_input % i == 0:
+            break
+        else:
+            flag = True
+
+if flag:
+    print('It\'s a prime')
+else:
+    print('Not a prime')
+    
+###################################
+
+5). Write a python program to print all Prime numbers in an interval of 1 - 10000
+
+for num in range(2, 10001):
+   # all prime numbers are greater than 1
+   if num > 1:
+       for i in range(2, num):
+           if (num % i) == 0:
+               break
+       else:
+           print(num, end=' ')
+           
+
+
+        
