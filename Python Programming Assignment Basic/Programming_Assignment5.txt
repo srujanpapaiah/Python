@@ -1,0 +1,90 @@
+#################################################################################
+
+1). Write a python program to find the LCM of a number.
+
+def compute_lcm(x, y):
+   if x > y:
+       greater = x
+   else:
+       greater = y
+   while(True):
+       if((greater % x == 0) and (greater % y == 0)):
+           lcm = greater
+           break
+       greater += 1
+   return lcm
+num1 = 6
+num2 = 9
+print("The L.C.M. is", compute_lcm(num1, num2))
+
+#################################################################################
+
+2). Write a python program to find HCF of a number.
+
+def compute_hcf(x, y):
+    if x > y:
+        smaller = y
+    else:
+        smaller = x
+    for i in range(1, smaller+1):
+        if((x % i == 0) and (y % i == 0)):
+            hcf = i 
+    return hcf
+num1 = 54 
+num2 = 24
+print("The H.C.F. is", compute_hcf(num1, num2))
+
+#################################################################################
+
+3). Write a python programm to convert decimal to Binary, Octal and Hexadecimal.
+
+Binary
+def DecimalToBinary(num):
+    if num >= 1:
+        DecimalToBinary(num // 2)
+    print(num % 2, end = '')
+dec_val = 24
+DecimalToBinary(dec_val)
+
+#Octal
+def DecimalToBinary(num):
+    if num >= 1:
+        DecimalToBinary(num // 8)
+    print(num % 8, end = '')
+dec_val = 24
+DecimalToBinary(dec_val)
+
+#Hexadecimal
+def DecimalToBinary(num):
+    if num >= 1:
+        DecimalToBinary(num // 16)
+    print(num % 16, end = '')
+dec_val = 24
+DecimalToBinary(dec_val)
+
+#################################################################################
+
+4). Write a python program to find ascii value of a character.
+
+ascii_val = 'a'
+print("The ASCII value of '" + ascii_val + "' is", ord(ascii_val))
+
+#################################################################################
+
+5). Write a python program to create a simple calculator with 4 basic mathematical operators.
+
+u = str(input('What operation do u want to perform? Addition, Subtraction, Multiplication or Division : ')).lower()
+
+u1 = int(input('Enter the 1st digit : '))
+u2 = int(input('Enter the second digit : '))
+
+if u == 'addition':
+    print(u1 + u2)
+elif u == 'subtraction':
+    print(u1-u2)
+elif u == 'multiplication':
+    print(u1*u2)
+elif u == 'division':
+    print(u1/u2)
+else:
+    print('Enter any four of the given things')
